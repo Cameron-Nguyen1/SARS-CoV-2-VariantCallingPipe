@@ -125,9 +125,6 @@ while IFS=\" read -r line; do
 if [[ $line == *"SRR"* ]]; then
 
     #STEP 1 - Build Sample Parameter Objects
-    #"6","SRR26891808","MOV","400mg","2","VD1"
-    #"8","SRR26891801","MOV","400mg","4","VD1"
-    #"9","SRR26891798","MOV","400mg","5","VD1"
     newl1=$(echo $line | awk -F\" '{print $4}') #SRR
     newl2=$(echo $line | awk -F\" '{print $6}') #Tx
     newl3=$(echo $line | awk -F\" '{print $8}') #Dose
